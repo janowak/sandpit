@@ -1,11 +1,11 @@
-var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var path = require('path');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	devtool: 'cheap-eval-source-map',
 	entry: [
-		'webpack-dev-server/client?http://localhost:' + process.env.PORT,
+		'webpack-dev-server/client?http://localhost:8080',
 		'webpack/hot/dev-server',
 		'./src/sandpit/sandpit'
 	],
@@ -30,6 +30,6 @@ module.exports = {
 	},
 	devServer: {
 		contentBase: './dist.sandpit',
-		hot: true,
-	},
-}
+		hot: true
+	}
+};
